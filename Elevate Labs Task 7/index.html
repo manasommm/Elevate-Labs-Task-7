@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Fetcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>User Directory</h1>
+            <div class="controls">
+                <input type="text" id="searchInput" placeholder="Search users..." class="search-input">
+                <button id="refreshBtn" class="btn btn-primary">
+                    <span class="btn-text">Refresh Data</span>
+                    <span class="spinner" id="refreshSpinner"></span>
+                </button>
+                <button id="clearBtn" class="btn btn-secondary">Clear</button>
+            </div>
+        </header>
+        
+        <div id="errorMessage" class="error-message hidden"></div>
+        <div id="loadingSpinner" class="loading-spinner hidden">
+            <div class="spinner-circle"></div>
+            <p>Loading user data...</p>
+        </div>
+        
+        <div id="userContainer" class="user-grid"></div>
+        
+        <div id="noResults" class="no-results hidden">
+            <p>No users found matching your search criteria.</p>
+        </div>
+        
+        <footer class="footer">
+            <p>Total Users: <span id="userCount">0</span></p>
+            <p>Last Updated: <span id="lastUpdated">Never</span></p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
